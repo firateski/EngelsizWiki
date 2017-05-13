@@ -1,9 +1,14 @@
-var url = "https://ipfs.io/ipns/QmVH1VzGBydSfmNG7rmdDjAeBZ71UVeEahVbNpFQtwZK8W";
+var rootUrl = "https://ipfs.io/ipns/QmVH1VzGBydSfmNG7rmdDjAeBZ71UVeEahVbNpFQtwZK8W";
+var query = "";
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-         return {
-           redirectUrl: url + details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1] + ".html"
-         };
+       query = details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1];
+       if(!query || query == '/'){
+         query = "/wiki/Wikipedia";
+       }
+       return {
+         redirectUrl: rootUrl + query + ".html"
+       };
     },
     {
         urls: [
