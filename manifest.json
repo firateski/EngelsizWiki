@@ -1,0 +1,26 @@
+{
+    "name": "Engelsiz Wiki",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Wikipedia'nın ülkemizdeki engelini yönlendirme yaparak atlatmak için yapılmış bir eklentidir.",
+    "icons": {
+        "16": "icon_16x16.png",
+        "64": "icon_64x64.png",
+        "128": "icon_128x128.png"
+    },
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+      "scripts":["background.js"]
+    },
+    "permissions": [
+      "activeTab",
+      "webNavigation",
+      "webRequestBlocking",
+      "webRequest",
+      "tabs",
+      "http://*/*",
+      "https://*/*"
+    ]
+}
