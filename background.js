@@ -4,7 +4,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
        query = details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1];
        if(!query || query == '/'){
-         query = "/wiki/Wikipedia";
+         query = "/wiki/Anasayfa";
        }
        return {
          redirectUrl: rootUrl + query + ".html"
