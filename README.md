@@ -1,5 +1,5 @@
 # EngelsizWiki
-Wikipedia'nın ülkemizdeki engelini basitçe IPFS protokolündeki Wikipedia sürümüne yönlendirerek atlatan Chrome eklentisidir.
+Wikipedia'nın ülkemizdeki engelini basitçe http://gowikipedia.org adresine yönlendirerek atlatan Chrome eklentisidir.
 
 ## Kurulum (Bilmeyenler için) ##
 
@@ -13,4 +13,4 @@ Wikipedia'nın ülkemizdeki engelini basitçe IPFS protokolündeki Wikipedia sü
 
 4- Eklenti sayfasının sağ üst kısmında <b>Geliştirici Modu</b> yazan kutucuğu aktif ederek ekstra seçeneklerin açılmasını sağlayın. Gelen seçeneklerden <b>Paketlenmemiş uzantıyı yükle</b> butonuna tıklayın ve açılan pencereden eklenti dosyalarını çıkarttığınız klasörü seçiniz.
 
-5- Tebrikler, artık tr.wikipedia.org sitesine yapılan her istek otomatik olarak ilgili protokol üzerinden engel olmadan yönlendirilecek.
+5- Tebrikler, artık wikipedia.org sitesine yapılan her istek otomatik olarak ilgili protokol üzerinden engel olmadan yönlendirilecek.
