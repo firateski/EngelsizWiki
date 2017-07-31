@@ -1,18 +1,24 @@
-var rootUrl = "https://ipfs.io/ipns/QmVH1VzGBydSfmNG7rmdDjAeBZ71UVeEahVbNpFQtwZK8W";
-var query = "";
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-       query = details.url.match(/^https?:\/\/[^\/]+([\S\s]*)/)[1];
-       if(!query || query == '/'){
-         query = "/wiki/Anasayfa";
-       }
+        var newUrl = "http://wikipedia.org"; //Varsayılan değer
+
+        var domainIndex = details.url.toLowerCase().indexOf("wikipedia");
+
+        if(domainIndex !== -1){
+            var beforeGoKeyword = details.url.substr(0, domainIndex);
+            var goKeyword = "go";
+            var afterGoKeyword = details.url.substr(domainIndex, details.url.length - domainIndex);
+
+            newUrl = beforeGoKeyword + goKeyword + afterGoKeyword; //gowikipedia domainine çevrilmiş yeni URL.
+        }
+
        return {
-         redirectUrl: rootUrl + query + ".html"
+         redirectUrl: newUrl
        };
     },
     {
         urls: [
-            "*://tr.wikipedia.org/*"
+            "*://*.wikipedia.org/*"
         ]
     },
     ["blocking"]
