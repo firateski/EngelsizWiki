@@ -1,3 +1,5 @@
+<b>Edit:</b> Bu eklentiyle aynı görevi gören gowikipedia.org'un resmi eklentisi yayımlandı. Chrome mağazasından indirmek için <code>https://chrome.google.com/webstore/detail/gowikipedia/foimebljcoplfkcjejmkckoepajpkcbk</code> linkine gidebilirsiniz.
+
 # EngelsizWiki
 Wikipedia'nın ülkemizdeki engelini basitçe http://gowikipedia.org adresine yönlendirerek atlatan Chrome eklentisidir.
 
